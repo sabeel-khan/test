@@ -40,7 +40,7 @@ app.get('/test', (req, res) => {
     
     const operators = get_supported_operators();
 
-    res.send(operators);
+    res.json(operators);
 });
 
 
