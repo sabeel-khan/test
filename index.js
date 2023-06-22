@@ -31,14 +31,17 @@ function get_supported_operators() {
   }
 }
 
+let count = 0;
+
 
 app.get('/test', (req, res) => {
+
+    console.log(`Request recieved : ${count++}`)
     
     const operators = get_supported_operators();
 
     res.send(operators);
 });
-
 
 
 const port = process.env.PORT || 3000
